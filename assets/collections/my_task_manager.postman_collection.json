@@ -1,0 +1,126 @@
+{
+	"info": {
+		"_postman_id": "6065b490-f34d-408e-9799-0db31b903e14",
+		"name": "My Task Manager",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "10416855"
+	},
+	"item": [
+		{
+			"name": "Create new task",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\":\"To study ASP.NET Core 4\",\r\n    \"description\":\"Remember to study 4\",\r\n    \"complete\":false,\r\n    \"deliveryEstimate\":\"2023-03-02T00:00:00\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5076/tasks",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5076",
+					"path": [
+						"tasks"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Find all tasks",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5076/tasks",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5076",
+					"path": [
+						"tasks"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete task",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5076/tasks/0b0b3e34-cf00-4667-9f20-6660b9bc8072",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5076",
+					"path": [
+						"tasks",
+						"0b0b3e34-cf00-4667-9f20-6660b9bc8072"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update task",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\":\"To study ASP.NET Core updated\",\r\n    \"description\":\"Remember to study updated\",\r\n    \"complete\":false,\r\n    \"deliveryEstimate\":\"2023-03-02T00:00:00\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5076/tasks/0b64928e-5d34-4af3-ab4f-43d33548af8a",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5076",
+					"path": [
+						"tasks",
+						"0b64928e-5d34-4af3-ab4f-43d33548af8a"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Find task by id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5076/tasks/0b64928e-5d34-4af3-ab4f-43d33548af8a",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5076",
+					"path": [
+						"tasks",
+						"0b64928e-5d34-4af3-ab4f-43d33548af8a"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
